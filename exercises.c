@@ -58,7 +58,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
       }
     }
   
-  int *pairsArr = (int *) malloc (pairCounter * (sizeof(int));
+  int *pairsArr = (int *) malloc (pairCounter * (sizeof(int)));
   *newSize = pairCounter;
 
   int newIndex = 0;
