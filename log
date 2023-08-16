@@ -69,3 +69,37 @@ test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-func
 cc1: all warnings being treated as errors
 Compilation failed
 0373237
+Wed 16 Aug 2023 04:35:56 AM UTC: 
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:61:62: error: expected ‘)’ before ‘;’ token
+   61 |   int *pairsArr = (int *) malloc (pairCounter * (sizeof(int));
+      |                                  ~                           ^
+      |                                                              )
+exercises.c:74:1: error: expected ‘,’ or ‘;’ before ‘}’ token
+   74 | }
+      | ^
+test.c:382:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+test.c:7:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+    7 | char msg[300];
+      |      ^~~
+In file included from test.c:1:
+exercises.c:61:8: error: unused variable ‘pairsArr’ [-Werror=unused-variable]
+   61 |   int *pairsArr = (int *) malloc (pairCounter * (sizeof(int));
+      |        ^~~~~~~~
+test.c:411: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:382:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-function]
+   47 | void readIntArray(int arr[], int *size) {
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+81d9727
